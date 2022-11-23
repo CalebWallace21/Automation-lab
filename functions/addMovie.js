@@ -19,6 +19,9 @@ const deleteMovie = async(driver) => {
 
     await driver.findElement(By.xpath(`//button[contains(text(), "x")]`)).click()
 
+    const ul = await driver.findElement(By.xpath(`//ul`))
+    expect(ul.hasChildren).toBeFalsy()
+
 }
 
 const clickMovie = async(driver)=> {

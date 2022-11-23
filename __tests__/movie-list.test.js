@@ -14,17 +14,19 @@ afterAll(async () => {
     await driver.quit()
 })
 
-test(`Add a movie`,  async () => {
-    await addMovie(driver)
-
-     await driver.sleep(3000)
-})
 
 test(`Delete a movie`,  async () => {
     await deleteMovie(driver)
 
      await driver.sleep(3000)
 })
+
+test(`Add a movie`,  async () => {
+    await addMovie(driver)
+
+     await driver.sleep(3000)
+})
+
 
 test(`Click a movie`,  async () => {
     await clickMovie(driver)
